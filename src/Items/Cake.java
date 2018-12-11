@@ -1,4 +1,5 @@
 package Items;
 
-public class Cake {
+public class Cake{
+
 }

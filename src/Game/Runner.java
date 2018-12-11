@@ -1,8 +1,8 @@
 package Game;
 
+import Items.Cake;
 import Person.Player;
-import Rooms.Room;
-import Rooms.GhostRoom;
+import Rooms.*;
 
 import java.util.Scanner;
 
@@ -24,10 +24,25 @@ public class Runner {
             }
         }
 
-        //Create a random winning room.
+        //Create a random ghost room.
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
         building[x][y] = new GhostRoom(x, y);
+
+        //Create a random cake room
+        int a= (int)(Math.random()*building.length);
+        int b= (int)(Math.random()*building.length);
+        building[a][b]= new CakeRoom(a, b);
+
+        //Create a random flashlight room
+        int f= (int)(Math.random()*building.length);
+        int g= (int)(Math.random()*building.length);
+        building[f][g]= new FlashlightRoom(f,g);
+
+        //Create a random Vacuum room
+        int j= (int)(Math.random()*building.length);
+        int k=(int)(Math.random()*building.length);
+        building[j][k]=new VacuumRoom(j,k);
 
         //Setup player 1 and the input scanner
         Player player1 = new Player("FirstName", "FamilyName", 0,0);

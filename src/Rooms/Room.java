@@ -1,8 +1,11 @@
 package Rooms;
 
 import Person.Player;
+import Items.Item;
 
 public class Room{
+    private Item item;
+
     Player occupant;
     int xLoc,yLoc;
 
@@ -18,10 +21,11 @@ public class Room{
      */
     public void enterRoom(Player x)
     {
-        System.out.println("You enter a plain old room");
+        System.out.println("You've entered the Ghost's room. Do you wish to FIGHT or RUN?");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+     //   x.addItem(this.item);
     }
 
     /**
@@ -31,6 +35,10 @@ public class Room{
     public void leaveRoom(Player x)
     {
         occupant = null;
+    }
+
+    public void placeItem(Item item){
+        this.item=item;
     }
 
 }

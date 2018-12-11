@@ -1,5 +1,6 @@
 package Rooms;
 
+import Game.Runner;
 import Person.Player;
 
 public class GhostRoom extends Room {
@@ -19,7 +20,7 @@ public class GhostRoom extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("You found the winning room! Ten points for Gryffindor.");
-       // Runner.gameOff();
+        Runner.gameOff();
     }
 
 

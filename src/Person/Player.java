@@ -1,6 +1,11 @@
 package Person;
 
+import Items.Item;
+
 public class Player {
+
+    private Item[] items= new Item[3];
+
     String firstName;
     String familyName;
     int xLoc, yLoc;
@@ -30,5 +35,12 @@ public class Player {
         this.yLoc = yLoc;
     }
 
+//    public void addItem(Item item){
+//        for(int i=0; i<3; i++){
+//            if (Item[i]=null){
+//
+//            }
+//        }
+//    }
 
 }
