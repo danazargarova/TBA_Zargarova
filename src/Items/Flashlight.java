@@ -1,4 +1,5 @@
 package Items;
 
-public class Flashlight {
+public class Flashlight extends Item {
+
 }

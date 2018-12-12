@@ -1,6 +1,8 @@
 package Rooms;
 
 import Game.Runner;
+import Items.Flashlight;
+import Items.GhostVacuum;
 import Person.Player;
 
 public class GhostRoom extends Room {
@@ -19,8 +21,23 @@ public class GhostRoom extends Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the winning room! Ten points for Gryffindor.");
-        Runner.gameOff();
+        int howManyItems=0;
+        for (int i =0; i < 2; i++){
+            if (x.items[i] instanceof Flashlight|| x.items[i] instanceof GhostVacuum){
+                howManyItems++;
+            }
+        }
+        if(howManyItems==0){
+            System.out.println("ypu died");
+            Runner.gameOff();
+        }
+        if (howManyItems==1){
+            if(Math.random() > .5){
+                System.out.println("ypu died");
+                Runner.gameOff();
+            }
+        }
+        System.out.print("You killed the ghost");
     }
 
 

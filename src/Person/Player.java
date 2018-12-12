@@ -4,7 +4,7 @@ import Items.Item;
 
 public class Player {
 
-    private Item[] items= new Item[3];
+    public Item[] items= new Item[2];
 
     String firstName;
     String familyName;
@@ -35,12 +35,12 @@ public class Player {
         this.yLoc = yLoc;
     }
 
-//    public void addItem(Item item){
-//        for(int i=0; i<3; i++){
-//            if (Item[i]=null){
-//
-//            }
-//        }
-//    }
+    public void addItem(Item item){
+        for(int i=0; i<2; i++){
+            if (items[i]==null){
+                items[i]=item;
+            }
+        }
+    }
 
 }

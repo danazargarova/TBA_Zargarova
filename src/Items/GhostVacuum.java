@@ -1,4 +1,4 @@
 package Items;
 
-public class GhostVacuum {
+public class GhostVacuum extends Item {
 }

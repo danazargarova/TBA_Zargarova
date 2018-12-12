@@ -1,6 +1,5 @@
 package Game;
 
-import Items.Cake;
 import Person.Player;
 import Rooms.*;
 
@@ -29,10 +28,6 @@ public class Runner {
         int y = (int)(Math.random()*building.length);
         building[x][y] = new GhostRoom(x, y);
 
-        //Create a random cake room
-        int a= (int)(Math.random()*building.length);
-        int b= (int)(Math.random()*building.length);
-        building[a][b]= new CakeRoom(a, b);
 
         //Create a random flashlight room
         int f= (int)(Math.random()*building.length);
