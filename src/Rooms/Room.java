@@ -21,7 +21,7 @@ public class Room{
      */
     public void enterRoom(Player x)
     {
-        System.out.println("You've entered the Ghost's room. Do you wish to FIGHT or RUN?");
+        System.out.println("");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

@@ -28,16 +28,16 @@ public class GhostRoom extends Room {
             }
         }
         if(howManyItems==0){
-            System.out.println("ypu died");
+            System.out.println("you died");
             Runner.gameOff();
         }
         if (howManyItems==1){
             if(Math.random() > .5){
-                System.out.println("ypu died");
+                System.out.println("you died");
                 Runner.gameOff();
             }
         }
-        System.out.print("You killed the ghost");
+        System.out.print("You killed the ghost! Congratulations!");
     }
 
 

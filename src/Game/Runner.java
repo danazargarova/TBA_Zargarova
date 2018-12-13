@@ -28,7 +28,6 @@ public class Runner {
         int y = (int)(Math.random()*building.length);
         building[x][y] = new GhostRoom(x, y);
 
-
         //Create a random flashlight room
         int f= (int)(Math.random()*building.length);
         int g= (int)(Math.random()*building.length);
@@ -49,7 +48,7 @@ public class Runner {
             String move = in.nextLine();
             if(validMove(move, player1, building))
             {
-                System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
+                System.out.println("Continue onwards, brave ghost hunter.");
 
             }
             else {
