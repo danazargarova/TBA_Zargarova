@@ -25,7 +25,15 @@ public class Room{
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-     //   x.addItem(this.item);
+        x.addItem(this.item);
+    }
+    public String toString(){
+        if (occupant == null){
+            return("[ ]");
+        }
+        else{
+            return ("[P]");
+        }
     }
 
     /**

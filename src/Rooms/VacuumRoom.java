@@ -10,10 +10,13 @@ public class VacuumRoom extends Room{
     }
     public void enterRoom(Player x)
     {
-        System.out.println("You've entered the Ghost's room. Do you wish to FIGHT or RUN?");
+        System.out.println("You stumbled into a Ghost Vacuum. You picked it up. This will increase your chance of killing the Ghost.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         x.addItem(new GhostVacuum());
+    }
+    public String toString(){
+        return "[V]";
     }
 }

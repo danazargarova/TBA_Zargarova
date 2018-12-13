@@ -13,8 +13,9 @@ public class Board {
     {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                System.out.println(map[i][j]);
+                System.out.print(map[i][j]);
             }
+            System.out.print("\n");
         }
     }
 }

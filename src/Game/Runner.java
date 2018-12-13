@@ -23,32 +23,39 @@ public class Runner {
             }
         }
 
+
         //Create a random ghost room.
-        int x = (int)(Math.random()*building.length);
-        int y = (int)(Math.random()*building.length);
+        int x = (int)(Math.random()*building.length-1)+1;
+        int y = (int)(Math.random()*building.length-1)+1;
         building[x][y] = new GhostRoom(x, y);
 
         //Create a random flashlight room
-        int f= (int)(Math.random()*building.length);
-        int g= (int)(Math.random()*building.length);
+        int f= (int)(Math.random()*building.length-1)+1;
+        int g= (int)(Math.random()*building.length-1)+1;
         building[f][g]= new FlashlightRoom(f,g);
 
         //Create a random Vacuum room
-        int j= (int)(Math.random()*building.length);
-        int k=(int)(Math.random()*building.length);
+        int j= (int)(Math.random()*building.length-1)+1;
+        int k=(int)(Math.random()*building.length-1)+1;
         building[j][k]=new VacuumRoom(j,k);
 
+
         //Setup player 1 and the input scanner
-        Player player1 = new Player("FirstName", "FamilyName", 0,0);
-        building[0][0].enterRoom(player1);
+        Player player1 = new Player( 0,0);
+        building[4][0].enterRoom(player1);
         Scanner in = new Scanner(System.in);
+        Board map = new Board(building);
+
+        map.printMap();
+
         while(gameOn)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();
             if(validMove(move, player1, building))
             {
-                System.out.println("Continue onwards, brave ghost hunter.");
+                System.out.println("Continue onwards, brave Ghosthunter");
+                map.printMap();
 
             }
             else {
