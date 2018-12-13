@@ -25,11 +25,13 @@ public class Runner {
 
 
         //Create a random ghost room.
+
         int x = (int)(Math.random()*building.length-1)+1;
         int y = (int)(Math.random()*building.length-1)+1;
         building[x][y] = new GhostRoom(x, y);
 
         //Create a random flashlight room
+
         int f= (int)(Math.random()*building.length-1)+1;
         int g= (int)(Math.random()*building.length-1)+1;
         building[f][g]= new FlashlightRoom(f,g);

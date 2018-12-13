@@ -49,5 +49,13 @@ public class Room{
         this.item=item;
     }
 
+    public int getY(){
+        return this.yLoc;
+    }
+
+    public int getX(){
+        return this.xLoc;
+    }
+
 }
 
