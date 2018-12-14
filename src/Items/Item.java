@@ -1,4 +1,6 @@
 package Items;
 
-public class Item {
+public interface Item {
+   public  String getName();
+
 }
