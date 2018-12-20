@@ -21,7 +21,7 @@ public class Room{
      */
     public void enterRoom(Player x)
     {
-        System.out.println("");
+        System.out.println("You entered a regular motel room. It smells like cigarettes and you swear you can \nhear beg bugs scuttling around.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

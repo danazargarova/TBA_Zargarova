@@ -1,5 +1,7 @@
 package Game;
 
+import Items.Flashlight;
+import Items.GhostVacuum;
 import Person.Player;
 import Rooms.*;
 
@@ -12,6 +14,7 @@ public class Runner {
 
     public static void main(String[] args)
     {
+        System.out.println("Welcome to Ghost Adventure. You are a paranormal investigator who has heard\nabout an extremely haunted motel near a small town in Michigan. Previous\ninvestigators have attempted to hunt down the malevolent spirit that plagues\nthe motel but all of them have failed. However, you are confident in your \nability to kill that Ghost. You will go from room to room within the motel. \nIf you come across a weapon or object left by previous investigators, you \nmay use it to your benefit. If you wish to see your inventory, type 'I.' \nIf you wish to see this message again, type 'info.' Good luck, brave ghost hunter.");
         Room[][] building = new Room[5][5];
 
         //Fill the building with normal rooms
@@ -24,6 +27,7 @@ public class Runner {
         }
 
 
+
         //Create a random ghost room.
 
         int x = (int)(Math.random()*building.length-1)+1;
@@ -31,7 +35,6 @@ public class Runner {
         building[x][y] = new GhostRoom(x, y);
 
         //Create a random flashlight room
-
         int f= (int)(Math.random()*building.length-1)+1;
         int g= (int)(Math.random()*building.length-1)+1;
         building[f][g]= new FlashlightRoom(f,g);
@@ -125,6 +128,19 @@ public class Runner {
                 else
                 {
                     return false;
+                }
+            case "info":
+                System.out.println("Welcome to Ghost Adventure. You are a paranormal investigator who has heard\nabout an extremely haunted motel near a small town in Michigan. Previous\ninvestigators have attempted to hunt down the malevolent spirit that plagues\nthe motel but all of them have failed. However, you are confident in your \nability to kill that Ghost. You will go from room to room within the motel. \nIf you come across a weapon or object left by previous investigators, you \nmay use it to your benefit. If you wish to see your inventory, type 'I.' \nIf you wish to see this message again, type 'info.' Good luck, brave ghost hunter.");
+            case "i":
+                for (int i = 0; i < p.inventory.length; i++) {
+                if (p.inventory[i] instanceof Flashlight && p.inventory[i] instanceof GhostVacuum){
+                    System.out.println("You have a FLASHLIGHT and a GHOST VACUUM.");}
+                else if(p.inventory[i] instanceof Flashlight){
+                    System.out.println("You have a FLASHLIGHT.");}
+                else if(p.inventory[i] instanceof GhostVacuum){
+                        System.out.println("You have a GHOST VACUUM.");}
+                else{
+                    System.out.println("Your inventory is empty. Go to rooms marked 'F' or 'V' to collect items.");}
                 }
             default:
                 break;

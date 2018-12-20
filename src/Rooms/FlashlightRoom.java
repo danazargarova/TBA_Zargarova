@@ -8,7 +8,7 @@ public class FlashlightRoom extends Room {
     }
     public void enterRoom(Player x)
     {
-        System.out.println("You stumbled into a flashlight. You picked it up. This will increase your chance of killing the Ghost.");
+        System.out.println("You stumbled into a FLASHLIGHT. You picked it up. This will increase your chance \nof killing the Ghost.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
